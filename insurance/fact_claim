@@ -1,0 +1,7 @@
+  - name: fact_claim
+    description: "Insurance Claim Fact"
+    columns:
+      - name: policy_key
+        description: "A foreign key to the policy dimension"
+        tests:
+          - not_null

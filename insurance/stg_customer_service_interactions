@@ -1,0 +1,15 @@
+  - name: stg_customer_service_interactions
+    description: |
+      Staging model for customer service interactions.
+      Each record represents a call between a customer and an agent.
+    columns:
+      - name: issue_type
+        tests:
+          - accepted_values:
+              values:
+                - "New Claim"
+                - "Claim Status"
+                - "Policy Change"
+                - "Coverage Info"
+                - "Billing Issue"
+                - "Policy Renewal"
