@@ -38,7 +38,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 
 models:
-  data_5360_dbt:
+  my_new_project:
     +database: OLIVIABROCKMAN
     +schema: dw_ecoessentials
     +materialized: table
