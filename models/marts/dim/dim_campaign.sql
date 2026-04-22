@@ -31,7 +31,7 @@ combined as (
 )
 
 select distinct
-    {{ dbt_utils.generate_surrogate_key(['campaign_id']) }} as campaign_key,
+    {{ dbt_utils.generate_surrogate_key(['campaign_id', 'campaign_type']) }} as campaign_key,
     campaign_id,
     campaign_name,
     campaign_discount,

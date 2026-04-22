@@ -22,5 +22,6 @@ left join {{ ref('dim_product') }} dp
     on ol.product_id = dp.product_id
 left join {{ ref('dim_campaign') }} dcamp
     on ol.campaign_id = dcamp.campaign_id
+   and dcamp.campaign_type = 'online'
 left join {{ ref('dim_date') }} dd
     on cast(o.order_timestamp as date) = dd.full_date

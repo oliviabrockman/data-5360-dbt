@@ -15,6 +15,7 @@ left join {{ ref('dim_customer') }} dc
     on sme.customer_id = dc.customer_id
 left join {{ ref('dim_campaign') }} dcamp
     on sme.campaign_id = dcamp.campaign_id
+   and dcamp.campaign_type = 'email'
 left join {{ ref('dim_subscriber') }} ds
     on sme.subscriber_id = ds.subscriber_id
 left join {{ ref('dim_email') }} de
